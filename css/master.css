@@ -1,0 +1,138 @@
+/* Start Global Rules */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --mainColor: #2196f3;
+  --textColor: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small Screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+/* Start Landing */
+
+.landing {
+  min-height: 100vh;
+  background-image: url(../images/01.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.landing .overlay {
+  position: absolute;
+  background-color: #333333ab;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.landing .header {
+  padding: 25px;
+  color: var(--textColor);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.landing .logo {
+  font-weight: bold;
+}
+
+.landing .links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.landing .links li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.landing .links li a {
+  color: var(--textColor);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.landing .links li a:hover,
+.landing .links li a.active {
+  color: var(--mainColor);
+}
+
+.landing .intro-text {
+  position: absolute;
+  text-align: center;
+  color: var(--textColor);
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.landing .intro-text h1{
+font-size: 40px;
+margin: 0;
+}
+
+.landing .intro-text h1 span {
+    color: var(--mainColor);
+}
+
+.landing .intro-text p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+/* Start Landing */
