@@ -8,5 +8,5 @@ setInterval(() => {
   // Generate random index from the images array
   let randomNumber = Math.floor(Math.random() * images.length);
   // Every 10 sec the image will change
-  landing.style.backgroundImage = `url(images/${images[randomNumber]})`;
+  landing.style.backgroundImage = `url(/images/${images[randomNumber]})`;
 }, 10000);
