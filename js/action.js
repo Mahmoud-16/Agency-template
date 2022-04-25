@@ -10,13 +10,11 @@ setInterval(() => {
   landing.style.backgroundImage = `url(images/${images[randomNumber]})`;
 }, 10000);
 
-
-
 // Showing toggle menu once the icon is clicked
 let headerIcon = document.querySelector(".landing i");
 let toggleMenu = document.querySelector(".landing .links");
 
-headerIcon.addEventListener("click", function (e) {
+headerIcon.addEventListener("click", function () {
   if (toggleMenu.style.display === "none") {
     toggleMenu.style.display = "block";
   } else {
@@ -30,3 +28,11 @@ document.addEventListener("click", function (e) {
     toggleMenu.style.display = "none";
   }
 });
+
+// Showing and Hiding Setting Box
+let settingBox = document.querySelector(".setting-box");
+let settingIcon = document.querySelector(".setting-box i");
+
+settingIcon.addEventListener("click", function () {
+  settingBox.classList.toggle("open");
+})

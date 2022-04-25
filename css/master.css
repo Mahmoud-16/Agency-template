@@ -58,6 +58,35 @@ a {
 }
 
 /* End Global Rules */
+
+/* Start Setting Box */
+.setting-box {
+  position: fixed;
+    left: -200px;
+    top: 0;
+    width: 200px;
+    min-height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    transition-duration: 0.3s;
+}
+
+.setting-box.open {
+  left: 0;
+}
+
+.setting-box i {
+  position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: #fff;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+/* End Setting Box */
+
+
 /* Start Landing */
 
 .landing {
