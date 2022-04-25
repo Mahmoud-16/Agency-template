@@ -75,7 +75,7 @@ a {
 
 .setting-box i {
   position: absolute;
-  right: -31px;
+  right: -25px;
   top: 100px;
   color: var(--mainColor);
   background-color: var(--textColor);
