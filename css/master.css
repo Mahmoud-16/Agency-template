@@ -122,7 +122,7 @@ padding: 0;
 .setting-box .options .colors ul li {
    width: 18px;
    height: 18px;
-   margin-left: 2px;
+   margin-left: 5px;
    background-color: rgb(57, 57, 57);
    opacity: 0.4;
    display: inline-block;
