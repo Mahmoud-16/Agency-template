@@ -253,6 +253,7 @@ padding: 0;
 @media (max-width: 767px) {
   .landing .intro-text {
     width: 80%;
+    margin-top: 0;
   }
 
   .landing .intro-text h1 {
@@ -307,7 +308,7 @@ padding: 0;
   }
 
   .landing .intro-text {
-    margin-top: 80px;
+    margin-top: 30px;
   }
 }
 /* End Landing */
