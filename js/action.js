@@ -1,15 +1,22 @@
-// Showing and Hiding Setting Box
-let settingBox = document.querySelector(".setting-box");
-let settingIcon = document.querySelector(".setting-box i");
-
-settingIcon.addEventListener("click", function () {
-  settingBox.classList.toggle("open");
-  settingIcon.classList.toggle("rotated");
-});
-
-// Switching the main color of the page
+// Checking if the local storage has a color
 let colorLis = document.querySelectorAll(".colors ul li");
 
+if (window.localStorage.getItem("color")) {
+  document.documentElement.style.setProperty(
+    "--mainColor",
+    window.localStorage.getItem("color")
+  );
+
+  colorLis.forEach((li) => {
+    li.classList.remove("active");
+  });
+
+  document
+    .querySelector(`[data-color = '${window.localStorage.getItem("color")}']`)
+    .classList.add("active");
+}
+
+// Switching the main color of the page
 colorLis.forEach((li) => {
   // On click remove active class from all lis and add it to the li I clicked
   li.addEventListener("click", (e) => {
@@ -24,7 +31,18 @@ colorLis.forEach((li) => {
       "--mainColor",
       e.target.dataset.color
     );
+    // Add the color of the clicked li to local storage
+    window.localStorage.setItem("color", e.target.dataset.color);
   });
+});
+
+// Showing and Hiding Setting Box
+let settingBox = document.querySelector(".setting-box");
+let settingIcon = document.querySelector(".setting-box i");
+
+settingIcon.addEventListener("click", function () {
+  settingBox.classList.toggle("open");
+  settingIcon.classList.toggle("rotated");
 });
 
 // Changing the landing background image every 10 seconds
