@@ -1,16 +1,18 @@
 // Checking if the local storage has a color
 let colorLis = document.querySelectorAll(".colors ul li");
 
+// If there is color in local storage
 if (window.localStorage.getItem("color")) {
+  // Change the mainColor to the color in local storage
   document.documentElement.style.setProperty(
     "--mainColor",
     window.localStorage.getItem("color")
   );
-
+  // Remove active class from all lis
   colorLis.forEach((li) => {
     li.classList.remove("active");
   });
-
+  // Add active class to the li that has the same color stored in local storage
   document
     .querySelector(`[data-color = '${window.localStorage.getItem("color")}']`)
     .classList.add("active");
@@ -23,7 +25,7 @@ colorLis.forEach((li) => {
     colorLis.forEach((li) => {
       li.classList.remove("active");
     });
-
+  // Add active class to the clicked li
     e.target.classList.add("active");
 
     // Change the main color to the color of the clicked li
