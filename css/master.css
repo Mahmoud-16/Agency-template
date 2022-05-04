@@ -124,9 +124,9 @@ padding: 0;
    height: 18px;
    margin-left: 5px;
    background-color: rgb(57, 57, 57);
-   opacity: 0.4;
    display: inline-block;
    cursor: pointer;
+   outline: 2px solid transparent;
    border-radius: 50%;
    -webkit-border-radius: 50%;
    -moz-border-radius: 50%;
@@ -136,6 +136,7 @@ padding: 0;
 
 .setting-box .options .colors ul li.active {
   opacity: 1;
+  outline: 2px solid #333;
 }
 
 .setting-box .options .colors ul li:first-child {
