@@ -25,7 +25,7 @@ colorLis.forEach((li) => {
     colorLis.forEach((li) => {
       li.classList.remove("active");
     });
-  // Add active class to the clicked li
+    // Add active class to the clicked li
     e.target.classList.add("active");
 
     // Change the main color to the color of the clicked li
@@ -58,6 +58,18 @@ setInterval(() => {
   // Every 10 sec the image will change
   landing.style.backgroundImage = `url(images/${images[randomNumber]})`;
 }, 10000);
+
+// Random Background ON and OFF
+let backgroundOptions = document.querySelectorAll(".random-backgrounds span");
+
+backgroundOptions.forEach((span) => {
+  span.addEventListener("click", (e) => {
+    backgroundOptions.forEach((span) => {
+      span.classList.remove("active");
+    });
+    e.target.classList.add("active");
+  });
+});
 
 // Showing toggle menu once the icon is clicked
 let headerIcon = document.querySelector(".landing i");

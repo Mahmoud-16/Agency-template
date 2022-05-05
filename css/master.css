@@ -94,11 +94,12 @@ a {
   -o-transform: rotate(180deg);
 }
 
-.setting-box .options .colors {
+.setting-box .options .colors,
+.background-controller {
   background-color: #eee;
   width: 90%;
   height: 70px;
-  margin:10px auto;
+  margin: 10px auto;
   text-align: center;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -107,31 +108,32 @@ a {
   -o-border-radius: 5px;
 }
 
-.setting-box .options .colors h4 {
+.setting-box h4 {
   color: rgb(114, 113, 113);
   padding-top: 10px;
   margin: 0;
   padding-top: 5px;
+  font-size: 14px;
 }
 
 .setting-box .options .colors ul {
-text-align: center;
-padding: 0;
+  text-align: center;
+  padding: 0;
 }
 
 .setting-box .options .colors ul li {
-   width: 18px;
-   height: 18px;
-   margin-left: 5px;
-   background-color: rgb(57, 57, 57);
-   display: inline-block;
-   cursor: pointer;
-   outline: 2px solid transparent;
-   border-radius: 50%;
-   -webkit-border-radius: 50%;
-   -moz-border-radius: 50%;
-   -ms-border-radius: 50%;
-   -o-border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  background-color: rgb(57, 57, 57);
+  display: inline-block;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .setting-box .options .colors ul li.active {
@@ -159,7 +161,23 @@ padding: 0;
   background-color: #cddc39;
 }
 
+.random-backgrounds span {
+  display: inline-block;
+  background-color: var(--mainColor);
+  color: #fff;
+  width: 47px;
+  margin: 14px 2px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.5;
+}
 
+.random-backgrounds span.active {
+  opacity: 1;
+}
 /* End Setting Box */
 
 /* Start Landing */
