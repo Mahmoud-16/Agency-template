@@ -49,15 +49,21 @@ settingIcon.addEventListener("click", function () {
 
 // Changing the landing background image every 10 seconds
 let landing = document.querySelector(".landing");
-
 let images = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
+let backgroundControl = true; // Depend on this to stop or start the switcher
+let backgroundInterval; // Declared global here to be visible to forEach. if declared inside switcher, it won't be visible globally
 
-setInterval(() => {
-  // Generate random index from the images array
-  let randomNumber = Math.floor(Math.random() * images.length);
-  // Every 10 sec the image will change
-  landing.style.backgroundImage = `url(images/${images[randomNumber]})`;
-}, 10000);
+function switcher() {
+  if (backgroundControl === true) {
+    backgroundInterval = setInterval(() => {
+      // Generate random index from the images array
+      let randomNumber = Math.floor(Math.random() * images.length);
+      // Every 10 sec the image will change
+      landing.style.backgroundImage = `url(images/${images[randomNumber]})`;
+    }, 10000);
+  }
+}
+switcher();
 
 // Random Background ON and OFF
 let backgroundOptions = document.querySelectorAll(".random-backgrounds span");
@@ -68,6 +74,14 @@ backgroundOptions.forEach((span) => {
       span.classList.remove("active");
     });
     e.target.classList.add("active");
+    // Controlling Background switcher
+    if (e.target.classList.contains("yes")) {
+      backgroundControl = true;
+      switcher();
+    } else {
+      backgroundControl = false;
+      clearInterval(backgroundInterval);
+    }
   });
 });
 
