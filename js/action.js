@@ -1,3 +1,4 @@
+// Start Option Box
 // Checking if the local storage has a color
 let colorLis = document.querySelectorAll(".colors ul li");
 
@@ -52,6 +53,24 @@ let landing = document.querySelector(".landing");
 let images = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
 let backgroundControl = true; // Depend on this to stop or start the switcher
 let backgroundInterval; // Declared global here to be visible to forEach. if declared inside switcher, it won't be visible globally
+let backgroundOptions = document.querySelectorAll(".random-backgrounds span");
+
+if (window.localStorage.getItem("yes")) {
+  backgroundControl = true;
+
+  backgroundOptions.forEach((span) => {
+    span.classList.remove("active");
+  });
+  document.querySelector(".random-backgrounds .yes").classList.add("active");
+}
+
+if (window.localStorage.getItem("no")) {
+  backgroundControl = false;
+  backgroundOptions.forEach((span) => {
+    span.classList.remove("active");
+  });
+  document.querySelector(".random-backgrounds .no").classList.add("active");
+}
 
 function switcher() {
   if (backgroundControl === true) {
@@ -66,8 +85,6 @@ function switcher() {
 switcher();
 
 // Random Background ON and OFF
-let backgroundOptions = document.querySelectorAll(".random-backgrounds span");
-
 backgroundOptions.forEach((span) => {
   span.addEventListener("click", (e) => {
     backgroundOptions.forEach((span) => {
@@ -78,13 +95,19 @@ backgroundOptions.forEach((span) => {
     if (e.target.classList.contains("yes")) {
       backgroundControl = true;
       switcher();
+      window.localStorage.setItem("yes", true);
+      window.localStorage.removeItem("no")
     } else {
       backgroundControl = false;
       clearInterval(backgroundInterval);
+      window.localStorage.setItem("no", false);
+      window.localStorage.removeItem("yes")
     }
   });
 });
+// End Option Box
 
+// Start Toggle Menu
 // Showing toggle menu once the icon is clicked
 let headerIcon = document.querySelector(".landing i");
 let toggleMenu = document.querySelector(".landing .links");
@@ -96,3 +119,4 @@ headerIcon.addEventListener("click", function () {
     toggleMenu.style.display = "none";
   }
 });
+// End Toggle Menu
