@@ -56,7 +56,6 @@ a {
   }
 }
 /* End Global Rules */
-
 /* Start Setting Box */
 .setting-box {
   position: fixed;
@@ -179,7 +178,6 @@ a {
   opacity: 1;
 }
 /* End Setting Box */
-
 /* Start Landing */
 .landing {
   min-height: 100vh;
@@ -331,3 +329,48 @@ a {
   }
 }
 /* End Landing */
+/* Start About Us */
+.about-us .container {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-us .info-box {
+  flex: 1;
+  padding: 30px;
+}
+
+.about-us .info-box h2 {
+  font-weight: bold;
+  color: var(--mainColor);
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.about-us .info-box p {
+  color: #333;
+  line-height: 1.8;
+}
+
+.about-us .image-box {
+  flex: 1;
+  text-align: center;
+}
+
+.about-us .image-box img {
+  width: 250px;
+  filter: drop-shadow(2px 4px 8px #585858);
+  -webkit-filter: drop-shadow(2px 4px 8px #585858);
+}
+
+@media (max-width: 767px) {
+  .about-us .container {
+    flex-direction: column;
+  }
+
+  .about-us .info-box {
+    text-align: center;
+  }
+}
+/* End About Us */
