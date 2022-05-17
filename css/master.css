@@ -372,5 +372,9 @@ a {
   .about-us .info-box {
     text-align: center;
   }
+
+  .about-us .image-box img {
+    width: 200px;
+  }
 }
 /* End About Us */
