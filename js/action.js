@@ -123,18 +123,10 @@ headerIcon.addEventListener("click", function () {
 
 // Start Skills
 let skills = document.querySelector(".skills");
+let allSkills = document.querySelectorAll(".skill-box .skill-progress span");
 
 window.onscroll = function () {
-  let skillsOffsetTop = skills.offsetTop;
-  let skillsOuterHeight = skills.offsetHeight;
-  let windowHeight = this.innerHeight;
-  let windowScrollTop = this.scrollY;
-
-  if (windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight)) {
-    let allSkills = document.querySelectorAll(
-      ".skill-box .skill-progress span"
-    );
-
+  if (window.scrollY >= skills.offsetTop - 100) {
     allSkills.forEach((skill) => {
       skill.style.width = skill.dataset.progress;
     });
