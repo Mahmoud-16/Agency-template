@@ -130,7 +130,7 @@ window.onscroll = function () {
   let windowHeight = this.innerHeight;
   let windowScrollTop = this.scrollY;
 
-  if (windowScrollTop > skillsOffsetTop + skillsOuterHeight - windowHeight) {
+  if (windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight)) {
     let allSkills = document.querySelectorAll(
       ".skill-box .skill-progress span"
     );
