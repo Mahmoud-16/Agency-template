@@ -96,12 +96,12 @@ backgroundOptions.forEach((span) => {
       backgroundControl = true;
       switcher();
       window.localStorage.setItem("yes", true);
-      window.localStorage.removeItem("no")
+      window.localStorage.removeItem("no");
     } else {
       backgroundControl = false;
       clearInterval(backgroundInterval);
       window.localStorage.setItem("no", false);
-      window.localStorage.removeItem("yes")
+      window.localStorage.removeItem("yes");
     }
   });
 });
@@ -120,3 +120,24 @@ headerIcon.addEventListener("click", function () {
   }
 });
 // End Toggle Menu
+
+// Start Skills
+let skills = document.querySelector(".skills");
+
+window.onscroll = function () {
+  let skillsOffsetTop = skills.offsetTop;
+  let skillsOuterHeight = skills.offsetHeight;
+  let windowHeight = this.innerHeight;
+  let windowScrollTop = this.scrollY;
+
+  if (windowScrollTop > skillsOffsetTop + skillsOuterHeight - windowHeight) {
+    let allSkills = document.querySelectorAll(
+      ".skill-box .skill-progress span"
+    );
+
+    allSkills.forEach((skill) => {
+      skill.style.width = skill.dataset.progress;
+    });
+  }
+};
+// End Skills
