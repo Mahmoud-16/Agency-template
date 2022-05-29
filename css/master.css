@@ -474,7 +474,7 @@ a {
 
 @media (max-width: 575px) {
   .gallery .image-box img {
-    width: 150px;
+    width: 100px;
   }
 }
 /* End Gallery */
