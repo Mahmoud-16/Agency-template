@@ -133,3 +133,23 @@ window.onscroll = function () {
   }
 };
 // End Skills
+
+// Start Gallery Popup
+let galleryImages = document.querySelectorAll(".gallery img");
+
+galleryImages.forEach((img) => {
+  img.addEventListener("click", function () {
+    // Overlay
+    let overlay = document.createElement("div");
+    overlay.className = "popup-overlay";
+    document.body.appendChild(overlay);
+    // Popup
+    let popupBox = document.createElement("div");
+    popupBox.className = "popup-box";
+    let popupImage = document.createElement("img");
+    popupImage.src = img.src;
+    popupBox.appendChild(popupImage);
+    document.body.appendChild(popupBox);
+  });
+});
+// End Gallery Popup
