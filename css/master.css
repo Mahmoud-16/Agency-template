@@ -471,4 +471,10 @@ a {
   margin: 5px;
   cursor: pointer;
 }
+
+@media (max-width: 575px) {
+  .gallery .image-box img {
+    width: 150px;
+  }
+}
 /* End Gallery */
