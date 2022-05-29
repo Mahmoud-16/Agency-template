@@ -539,8 +539,14 @@ a {
 }
 
 @media (max-width: 575px) {
+  .popup-box {
+    width: 300px;
+  }
   .gallery .image-box img {
-    width: 100px;
+    width: 150px;
+  }
+  .popup-box h3 {
+    font-size: 15px;
   }
 }
 /* End Gallery */
