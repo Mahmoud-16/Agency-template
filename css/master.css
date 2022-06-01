@@ -550,3 +550,110 @@ a {
   }
 }
 /* End Gallery */
+/* End Timeline */
+.timeline {
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+  background-color: #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  background-color: var(--mainColor);
+  width: 2px;
+  height: 90%;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline .year {
+  width: 50px;
+  margin: 20px auto;
+  position: relative;
+  background-color: var(--mainColor);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.timeline section {
+  display: flex;
+}
+
+.timeline section:nth-of-type(2),
+.timeline section:nth-of-type(4) {
+  justify-content: flex-end;
+}
+
+.timeline section .text {
+  width: calc(50% - 25px);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.timeline section .text h3 {
+  margin: 5px;
+  color: var(--mainColor);
+}
+
+.timeline section .text p {
+  color: #666;
+  line-height: 1.6;
+  margin: 8px;
+  position: relative;
+}
+
+.timeline .right::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  margin: 5px 0 0 -30px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+}
+
+.timeline .left::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 50%;
+  margin: 5px 5px 0 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+}
+
+@media (max-width: 991px) {
+  .timeline section, .timeline section:nth-of-type(2),
+  .timeline section:nth-of-type(4) {
+    justify-content: center;
+    z-index: 10;
+    position: relative;
+  }  
+  .timeline .right::before, .timeline .left::before {
+    display: none;
+  }
+  .timeline section .text {
+    width: 90%;
+    text-align: center;
+    margin: 10px;
+  }
+  .timeline .year {
+    margin: 20px auto;
+  }
+  .timeline section .text p {
+    font-size: 14px;
+  }
+}
+/* End Timeline */
