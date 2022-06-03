@@ -25,6 +25,20 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  text-align: center;
+  font-weight: bold;
+  color: var(--mainColor);
+  font-size: 40px;
+  margin: 0 0 40px;
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -343,9 +357,10 @@ a {
 }
 
 .about-us .info-box h2 {
+  text-align: start;
   font-weight: bold;
   color: var(--mainColor);
-  font-size: 30px;
+  font-size: 40px;
   margin: 0 0 10px;
 }
 
@@ -377,6 +392,9 @@ a {
   .about-us .image-box img {
     width: 200px;
   }
+  .about-us .info-box h2 {
+    text-align: center;
+  }
 }
 /* End About Us */
 /* Start Skills */
@@ -384,14 +402,6 @@ a {
   background-color: #eee;
   padding-top: var(--sectionPadding);
   padding-bottom: var(--sectionPadding);
-}
-
-.skills h2 {
-  text-align: center;
-  font-weight: bold;
-  color: var(--mainColor);
-  font-size: 30px;
-  margin: 0 0 40px;
 }
 
 .skills .skill-box {
@@ -449,14 +459,6 @@ a {
 .gallery {
   padding-top: var(--sectionPadding);
   padding-bottom: var(--sectionPadding);
-}
-
-.gallery h2 {
-  text-align: center;
-  font-weight: bold;
-  color: var(--mainColor);
-  font-size: 30px;
-  margin: 0 0 40px;
 }
 
 .gallery .image-box {
@@ -689,3 +691,58 @@ a {
   }
 }
 /* End Timeline */
+/* Start Features */
+.features {
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+}
+
+.features .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feat-box {
+  width: 30%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.feat-box img {
+  width: 100px;
+  filter: drop-shadow(2px 4px 8px #585858);
+  -webkit-filter: drop-shadow(2px 4px 8px var(--mainColor));
+}
+
+.feat-box h4 {
+  font-size: 22px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.feat-box h4::before {
+  content: "";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: var(--mainColor);
+    bottom: -20px;
+    left: calc(50% - 20px);
+}
+
+.feat-box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .features .container {
+    justify-content: center;
+  }
+  .feat-box {
+    width: 90%;
+  }
+}
+/* End Features */
