@@ -170,7 +170,18 @@ galleryImages.forEach((img) => {
 document.addEventListener("click", (e) => {
   if (e.target.className === "close-button") {
     e.target.parentNode.remove();
-    document.querySelector(".popup-overlay").remove()
+    document.querySelector(".popup-overlay").remove();
   }
-})
+});
 // End Gallery Popup
+// Start Nav Bullets
+let allBullets = document.querySelectorAll(".nav-bullets .bullet");
+
+allBullets.forEach((bullet) => {
+  bullet.addEventListener("click", (e) => {
+    document
+      .querySelector(e.target.dataset.section)
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
+// End Nav Bullets

@@ -193,6 +193,68 @@ h2 {
   opacity: 1;
 }
 /* End Setting Box */
+/* Start Navigation Bullets */
+.nav-bullets {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  z-index: 2000;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.nav-bullets .bullet {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--mainColor);
+  margin-bottom: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.nav-bullets .bullet:hover .tooltip {
+  display: block;
+}
+
+.nav-bullets .bullet .tooltip {
+  position: absolute;
+  left: -140px;
+  top: -10px;
+  background-color: #2196f3;
+  padding: 10px 15px;
+  text-align: center;
+  width: 120px;
+  color: #fff;
+  cursor: default;
+  pointer-events: none;
+  display: none;
+}
+
+.nav-bullets .bullet .tooltip::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -20px;
+  top: 50%;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent var(--mainColor);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+/* End Navigation Bullets */
 /* Start Landing */
 .landing {
   min-height: 100vh;
@@ -251,6 +313,7 @@ h2 {
 
 .landing .intro-text {
   position: absolute;
+  width: 90%;
   text-align: center;
   color: var(--textColor);
   z-index: 2;
@@ -834,58 +897,3 @@ h2 {
   }
 }
 /* End Testimonials */
-/* Start Navigation Bullets */
-.nav-bullets {
-  position: fixed;
-  top: 50%;
-  right: 10px;
-  z-index: 2000;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-
-.nav-bullets .bullets {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  border: 3px solid var(--mainColor);
-  margin-bottom: 25px;
-  cursor: pointer;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-.nav-bullets .bullets .tooltip {
-  position: absolute;
-  left: -141px;
-  top: -12px;
-  background-color: #2196f3;
-  padding: 10px 15px;
-  text-align: center;
-  width: 120px;
-  color: #fff;
-}
-
-.nav-bullets .bullets .tooltip::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  right: -20px;
-  top: 50%;
-  border-style: solid;
-  border-width: 10px;
-  border-color: transparent transparent transparent var(--mainColor);
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-/* End Navigation Bullets */
