@@ -174,14 +174,21 @@ document.addEventListener("click", (e) => {
   }
 });
 // End Gallery Popup
-// Start Nav Bullets
+// Start Nav Bullets & Links
 let allBullets = document.querySelectorAll(".nav-bullets .bullet");
+let allLinks = document.querySelectorAll(".links a");
 
-allBullets.forEach((bullet) => {
-  bullet.addEventListener("click", (e) => {
-    document
-      .querySelector(e.target.dataset.section)
-      .scrollIntoView({ behavior: "smooth" });
+function scrollToSection(elements) {
+  elements.forEach((ele) => {
+    ele.addEventListener("click", (e) => {
+      e.preventDefault();
+      document
+        .querySelector(e.target.dataset.section)
+        .scrollIntoView({ behavior: "smooth" });
+    });
   });
-});
-// End Nav Bullets
+}
+
+scrollToSection(allBullets);
+scrollToSection(allLinks);
+// End Nav Bullets & Links
