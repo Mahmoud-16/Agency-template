@@ -81,6 +81,7 @@ h2 {
   background-color: var(--textColor);
   z-index: 100;
   transition-duration: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .setting-box.open {
@@ -175,7 +176,7 @@ h2 {
   background-color: #cddc39;
 }
 
-.random-backgrounds span {
+.setting-box span {
   display: inline-block;
   background-color: var(--mainColor);
   color: #fff;
@@ -189,7 +190,7 @@ h2 {
   opacity: 0.5;
 }
 
-.random-backgrounds span.active {
+.setting-box span.active {
   opacity: 1;
 }
 /* End Setting Box */
@@ -253,6 +254,12 @@ h2 {
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+  .nav-bullets {
+    display: none;
+  }
 }
 /* End Navigation Bullets */
 /* Start Landing */
