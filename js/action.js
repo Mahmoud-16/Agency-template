@@ -221,3 +221,9 @@ function scrollToSection(elements) {
 scrollToSection(allBullets);
 scrollToSection(allLinks);
 // End Nav Bullets & Links
+// Start Reset Options
+document.querySelector(".reset-options").onclick = function () {
+window.localStorage.clear();
+window.location.reload();
+};
+// End Reset Options

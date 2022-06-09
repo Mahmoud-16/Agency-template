@@ -110,7 +110,8 @@ h2 {
 }
 
 .setting-box .options .colors,
-.background-controller, .bullets-controller {
+.background-controller,
+.bullets-controller {
   background-color: #eee;
   width: 90%;
   height: 70px;
@@ -192,6 +193,23 @@ h2 {
 
 .setting-box span.active {
   opacity: 1;
+}
+
+.setting-box button {
+  display: block;
+  width: 90%;
+  margin: auto;
+  padding: 10px 20px;
+  background-color: #F44336;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 /* End Setting Box */
 /* Start Navigation Bullets */
