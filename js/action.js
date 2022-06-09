@@ -105,6 +105,35 @@ backgroundOptions.forEach((span) => {
     }
   });
 });
+
+// Show and Hide bullets
+let bulletsOptions = document.querySelectorAll(".bullets-controller span");
+let bullets = document.querySelector(".nav-bullets");
+
+if (window.localStorage.getItem("hide")) {
+  bulletsOptions.forEach((option) => {
+    option.classList.remove("active");
+  });
+  document.querySelector(".hide").classList.add("active");
+  bullets.style.display = "none";
+}
+
+bulletsOptions.forEach((option) => {
+  option.addEventListener("click", (e) => {
+    bulletsOptions.forEach((option) => {
+      option.classList.remove("active");
+    });
+    e.target.classList.add("active");
+
+    if (e.target.classList.contains("hide")) {
+      bullets.style.display = "none";
+      window.localStorage.setItem("hide", false);
+    } else {
+      bullets.style.display = "block";
+      window.localStorage.removeItem("hide");
+    }
+  });
+});
 // End Option Box
 
 // Start Toggle Menu

@@ -110,7 +110,7 @@ h2 {
 }
 
 .setting-box .options .colors,
-.background-controller {
+.background-controller, .bullets-controller {
   background-color: #eee;
   width: 90%;
   height: 70px;
