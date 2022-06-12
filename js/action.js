@@ -140,9 +140,18 @@ bulletsOptions.forEach((option) => {
 // Showing toggle menu once the icon is clicked
 let headerIcon = document.querySelector(".landing i");
 let toggleMenu = document.querySelector(".landing .links");
+const mediaQuery = window.matchMedia("(min-width: 992px)");
 
 headerIcon.addEventListener("click", function () {
   if (toggleMenu.style.display === "none") {
+    toggleMenu.style.display = "block";
+  } else {
+    toggleMenu.style.display = "none";
+  }
+});
+
+window.addEventListener("resize", function () {
+  if (mediaQuery.matches) {
     toggleMenu.style.display = "block";
   } else {
     toggleMenu.style.display = "none";
@@ -223,7 +232,7 @@ scrollToSection(allLinks);
 // End Nav Bullets & Links
 // Start Reset Options
 document.querySelector(".reset-options").onclick = function () {
-window.localStorage.clear();
-window.location.reload();
+  window.localStorage.clear();
+  window.location.reload();
 };
 // End Reset Options
