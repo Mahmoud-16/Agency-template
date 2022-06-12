@@ -1018,3 +1018,33 @@ textarea:focus::placeholder {
   }
 }
 /* End Contact Us */
+/* Start Footer */
+.footer {
+  padding: 20px 0 20px 0;
+  background-color: #333;
+  text-align: center;
+}
+
+.footer span {
+  padding-top: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer i {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.footer i:first-of-type {
+  color: #1877f2;
+}
+
+.footer i:nth-of-type(2) {
+  color: rgb(29 155 240);
+}
+.footer i:last-of-type {
+  color: #f00;
+}
+/* End Footer */
