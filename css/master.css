@@ -1075,3 +1075,30 @@ textarea:focus::placeholder {
   color: #f00;
 }
 /* End Footer */
+/* Start ScrollTop */
+.scroll-top {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  bottom: 30px;
+  right: 40px;
+  background-color: var(--mainColor);
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: .5s;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+.scroll-top i {
+  color: #ffff;
+}
+/* End ScrollTop */
