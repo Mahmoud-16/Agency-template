@@ -1079,7 +1079,7 @@ textarea:focus::placeholder {
 .scroll-top {
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 1000;
   bottom: 30px;
   right: 40px;
   background-color: var(--mainColor);

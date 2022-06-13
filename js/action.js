@@ -154,13 +154,13 @@ headerIcon.addEventListener("click", function () {
 let skills = document.querySelector(".skills");
 let allSkills = document.querySelectorAll(".skill-box .skill-progress span");
 
-window.onscroll = function () {
+window.addEventListener("scroll", function () {
   if (window.scrollY >= skills.offsetTop - 100) {
     allSkills.forEach((skill) => {
       skill.style.width = skill.dataset.progress;
     });
   }
-};
+});
 // End Skills
 
 // Start Gallery Popup
@@ -223,7 +223,26 @@ scrollToSection(allLinks);
 // End Nav Bullets & Links
 // Start Reset Options
 document.querySelector(".reset-options").onclick = function () {
-window.localStorage.clear();
-window.location.reload();
+  window.localStorage.clear();
+  window.location.reload();
 };
 // End Reset Options
+// Start ScrollTop Button
+let scrollTopBtn = document.querySelector(".scroll-top");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 800) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+});
+
+scrollTopBtn.onclick = function () {
+  window.scrollTo({
+    left: 0,
+    top: 0,
+    behavior: "smooth",
+  });
+};
+// End ScrollTop Button
